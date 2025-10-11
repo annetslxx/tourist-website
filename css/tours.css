@@ -1,0 +1,180 @@
+.tours-main {
+    min-height: 100vh;
+    background: #2a2a2a;
+    padding-top: 80px;
+}
+
+.tours-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../storage/telegram.png")
+    center / cover;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.tours-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 3rem;
+    line-height: 1.3;
+}
+
+.tour-icons {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tour-icon {
+    text-align: center;
+}
+
+.icon-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.icon-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tour-icon p {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.tour-detail {
+    padding: 4rem 2rem;
+    background: linear-gradient(180deg, #8b6f6f 0%, #6d5555 100%);
+}
+
+.tour-detail.reverse {
+    background: linear-gradient(180deg, #6d5555 0%, #8b6f6f 100%);
+}
+
+.tour-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.tour-detail.reverse .tour-content {
+    flex-direction: row-reverse;
+}
+
+.tour-images {
+    flex: 1;
+}
+
+.tour-main-image {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.tour-image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.grid-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.grid-image.large {
+    grid-row: span 2;
+    height: 100%;
+}
+
+.tour-info {
+    flex: 1;
+    color: #fff;
+}
+
+.tour-destination {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #7d2131;
+    margin-bottom: 0.5rem;
+}
+
+.tour-subtitle {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+
+.tour-description {
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.95);
+    text-align: justify;
+}
+
+.tour-extra-images {
+    margin: 2rem 0;
+}
+
+.tour-extra-images img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.learn-more {
+    display: inline-block;
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 0.8rem 0;
+    border-bottom: 2px solid #fff;
+    transition: all 0.3s ease;
+}
+
+.learn-more:hover {
+    color: #7d2131;
+    border-bottom-color: #7d2131;
+}
+
+@media (max-width: 968px) {
+    .tour-content,
+    .tour-detail.reverse .tour-content {
+        flex-direction: column;
+    }
+
+    .tours-title {
+        font-size: 2rem;
+    }
+
+    .tour-destination {
+        font-size: 2rem;
+    }
+
+    .tour-icons {
+        gap: 2rem;
+    }
+
+    .icon-circle {
+        width: 100px;
+        height: 100px;
+    }
+}

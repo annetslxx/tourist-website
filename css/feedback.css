@@ -1,0 +1,150 @@
+.feedback-main {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../storage/Feedback-back.jpg")
+    center / cover;
+    padding: 100px 20px 40px;
+}
+
+.hero-preview {
+    max-width: 1200px;
+    margin: 0 auto 5rem;
+    text-align: center;
+}
+
+.preview-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.tour-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.tour-card {
+    width: 220px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.tour-card:hover {
+    transform: translateY(-10px);
+}
+
+.tour-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.tour-name {
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+}
+
+.testimonials-section {
+    max-width: 1000px;
+    margin: 0 auto 4rem;
+}
+
+.testimonials-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    text-align: left;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.testimonials-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.testimonial-card {
+    background: rgba(200, 180, 170, 0.9);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.testimonial-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #000;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.testimonial-author {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #7d2131;
+    font-style: italic;
+    text-align: right;
+}
+
+.registration-cta {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.registration-btn {
+    padding: 1.5rem 4rem;
+    background: #6d0c1d;
+    color: #fff;
+    border: none;
+    border-radius: 40px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(109, 12, 29, 0.5);
+    letter-spacing: 0.1em;
+}
+
+.registration-btn:hover {
+    background: #7d2131;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(109, 12, 29, 0.6);
+}
+
+@media (max-width: 768px) {
+    .preview-title {
+        font-size: 2rem;
+    }
+
+    .testimonials-title {
+        font-size: 1.8rem;
+    }
+
+    .tour-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tour-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .registration-btn {
+        padding: 1.2rem 3rem;
+        font-size: 1.2rem;
+    }
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In - Japan Travel Agency</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/signin.css">
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-left">
+    <div class="logo-circle"></div>
+    <a href="index.html" class="nav-link ">Home</a>
+    <a href="about.html" class="nav-link">About us</a>
+    <a href="tours.html" class="nav-link">Tours</a>
+    <a href="signin.html" class="nav-link active">Sign in</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+    <a href="feedback.html" class="nav-link">Feedback</a>
+  </div>
+  <div class="nav-right">
+    <img src="../storage/telegram.png" alt="telegram-logo" class="telegram-logo">
+  </div>
+</nav>
+
+<main class="signin-main">
+  <section class="registration-section">
+    <h1 class="page-title">Start Your Japanese Journey</h1>
+
+    <form class="registration-form">
+      <div class="form-group">
+        <label>First name:</label>
+        <input type="text" name="firstName" required>
+      </div>
+
+      <div class="form-group">
+        <label>Last Name:</label>
+        <input type="text" name="lastName" required>
+      </div>
+
+      <div class="form-group">
+        <label>Email address:</label>
+        <input type="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label>Phone Number:</label>
+        <input type="tel" name="phone" required>
+      </div>
+
+      <div class="form-group">
+        <label>Create Password:</label>
+        <input type="password" name="password" required>
+      </div>
+
+      <div class="form-group">
+        <label>Tour Preference:</label>
+        <div class="checkbox-group">
+          <label class="checkbox-label">
+            <input type="checkbox" name="tourPref" value="cultural">
+            Cultural Tours:
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="tourPref" value="city">
+            City Adventures:
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="tourPref" value="nature">
+            Nature Exploration:
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Preferred Travel Date:</label>
+        <input type="date" name="travelDate">
+      </div>
+
+      <div class="form-group">
+        <label>Subscribe to newsletter</label>
+        <div class="radio-group">
+          <label class="radio-label">
+            <input type="radio" name="newsletter" value="yes">
+            Yes
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="newsletter" value="no" checked>
+            No
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Additional info:</label>
+        <textarea name="additionalInfo" rows="4"></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Create Account & Explore Japan</button>
+    </form>
+  </section>
+
+  <section class="custom-tour-section">
+    <h2 class="section-title">Custom Tour Request Form</h2>
+
+    <form class="custom-tour-form">
+      <div class="form-group">
+        <label>Number of Travelers:</label>
+        <input type="number" name="travelers" min="1">
+      </div>
+
+      <div class="form-group">
+        <label>Budget Range:</label>
+        <div class="checkbox-group">
+          <label class="checkbox-label">
+            <input type="radio" name="budget" value="economy">
+            Economy ($1000-2000)
+          </label>
+          <label class="checkbox-label">
+            <input type="radio" name="budget" value="standard">
+            Standard ($2000-4000)
+          </label>
+          <label class="checkbox-label">
+            <input type="radio" name="budget" value="premium">
+            Premium ($4000+)
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Activities:</label>
+        <div class="checkbox-group">
+          <label class="checkbox-label">
+            <input type="checkbox" name="activities" value="shopping">
+            Shopping
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="activities" value="temples">
+            Temple visits
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="activities" value="food">
+            Food tours
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="activities" value="workshops">
+            Cultural workshops
+          </label>
+        </div>
+      </div>
+    </form>
+  </section>
+</main>
+</body>
+</html>

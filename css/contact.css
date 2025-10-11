@@ -1,0 +1,145 @@
+.contact-main {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../storage/Contact.jpg")
+    center / cover;
+    padding: 100px 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-container {
+    max-width: 1000px;
+    width: 100%;
+}
+
+.contact-section {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 3rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.info-block {
+    text-align: left;
+}
+
+.info-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.info-detail {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0.5rem 0;
+    line-height: 1.6;
+}
+
+.info-detail a {
+    color: #fff;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.info-detail a:hover {
+    color: #c8daea;
+}
+
+.telegram-block {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.telegram-link {
+    display: block;
+}
+
+.telegram-icon {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.telegram-icon:hover {
+    transform: scale(1.1);
+}
+
+.telegram-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #38b0e3 0%, #1d93d2 100%);
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(56, 176, 227, 0.4);
+}
+
+.telegram-plane {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.plane-part {
+    position: absolute;
+}
+
+.plane-part.part1 {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 30px solid #c8daea;
+    transform: rotate(45deg) translate(-5px, -5px);
+}
+
+.plane-part.part2 {
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 25px solid #a9c6d8;
+    transform: rotate(45deg) translate(-2px, -2px);
+}
+
+.plane-part.part3 {
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 18px solid #ffffff;
+    transform: rotate(45deg) translate(2px, 2px);
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 2rem;
+    }
+
+    .info-title {
+        font-size: 2rem;
+    }
+
+    .info-detail {
+        font-size: 1rem;
+    }
+
+    .telegram-block {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
