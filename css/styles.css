@@ -5,7 +5,6 @@
 }
 
 body {
-    /* Updated font family to JetBrains Mono */
     font-family: "JetBrains Mono", monospace;
     overflow-x: hidden;
 }
@@ -13,6 +12,7 @@ body {
 .hero-container {
     position: relative;
     width: 100%;
+    min-height: 100vh;
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -26,7 +26,6 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.4);
     z-index: 1;
 }
 
@@ -86,16 +85,16 @@ body {
 }
 
 .telegram-logo {
-    position: relative;
     width: 50px;
     height: 50px;
+    transition: transform 0.2s;
 }
 
 .telegram-logo:hover {
     transform: scale(1.05);
 }
 
-
+/* Hero content (index page specific) */
 .hero-content {
     position: relative;
     z-index: 2;

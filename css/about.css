@@ -1,7 +1,9 @@
+.page-container{
+    background: linear-gradient(180deg, rgba(170, 127, 127, 0.9) 0%, rgba(22, 22, 22, 0.9) 99.99%);
+}
 .about-main {
     min-height: 100vh;
-    background: linear-gradient(180deg, #d4a5a5 0%, #9b7b7b 100%);
-    padding: 100px 20px 40px;
+    padding: 40px 20px;
 }
 
 .section-title {
@@ -105,8 +107,8 @@
 }
 
 .image-large {
-    flex: 1;
     max-width: 400px;
+    max-height: 500px;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
@@ -115,7 +117,6 @@
 .image-large img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
 }
 
 .services-list {
@@ -180,7 +181,7 @@
     border: 2px solid #000;
     border-radius: 25px;
     font-family: "JetBrains Mono", monospace;
-    font-size: 1rem;
+    font-size: 1.5rem;
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -196,10 +197,10 @@
 }
 
 .important-details a {
-    color: #000;
+    color: #c8daea;
     text-decoration: underline;
     font-style: italic;
-    font-size: 1rem;
+    font-size: 2.5rem;
 }
 
 @media (max-width: 768px) {

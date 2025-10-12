@@ -2,7 +2,12 @@
     min-height: 100vh;
     background: linear-gradient(180deg, rgba(100, 100, 100, 0.8) 0%, rgba(80, 80, 80, 0.9) 100%),
     url("../storage/Sign-in.jpg") center / cover;
-    padding: 100px 20px 40px;
+    padding: 40px 20px;
+}
+
+.page-container{
+    background: linear-gradient(180deg, rgba(100, 100, 100, 0.8) 0%, rgba(80, 80, 80, 0.9) 100%),
+    url("../storage/Sign-in.jpg") center / cover;
 }
 
 .page-title {
@@ -41,6 +46,7 @@
     border-radius: 15px;
 }
 
+/* Unified form styles - moved common styles here */
 .form-group {
     margin-bottom: 1.5rem;
 }
@@ -90,8 +96,7 @@
     margin-top: 0.5rem;
 }
 
-.checkbox-label,
-.radio-label {
+.checkbox-label {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -101,7 +106,7 @@
 }
 
 .checkbox-label input[type="checkbox"],
-.radio-label input[type="radio"] {
+.checkbox-label input[type="radio"] {
     width: 18px;
     height: 18px;
     cursor: pointer;
@@ -114,10 +119,16 @@
 }
 
 .radio-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     background: #fff;
     padding: 0.6rem 1.5rem;
     border-radius: 25px;
     border: 2px solid #000;
+    font-size: 1rem;
+    color: #000;
+    cursor: pointer;
     transition: all 0.3s ease;
 }
 
@@ -127,6 +138,7 @@
     border-color: #7d2131;
 }
 
+/* Unified submit button styles */
 .submit-btn {
     width: 100%;
     padding: 1.2rem;
