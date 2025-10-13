@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e8e8e8;
+    text-align: center;
+    padding: 20px;
+}
+
+.passport-container {
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.passport {
+    width: 600px;
+    border: 2px solid #333;
+    border-radius: 6px;
+}
+
+.field {
+    position: absolute;
+    font-size: 16px;
+    font-weight: bold;
+    color: #1a1a1a;
+}
+
+#issuing {
+    top: 90px;
+    left: 140px;
+    width: 300px;
+    text-align: left;
+    font-size: 13px;
+    line-height: 2.3;
+}
+
+#issue-date {
+    top: 190px;
+    left: 150px;
+    width: 200px;
+    text-align: left;
+    font-size: 13px;
+    color: #222;
+}
+
+#surname { top: 470px; left: 250px; }
+#name { top: 535px; left: 230px; }
+#birth { top: 600px; left: 350px; }
+#gender { top: 600px; left: 230px; }
+#city { top: 633px; left: 255px; }
+
+#photo-sign {
+    position: absolute;
+    top: 530px;
+    left: 38px;
+    width: 160px;
+    height: auto;
+    border-radius: 4px;
+}
+
+#signature {
+    position: absolute;
+    top: 260px;
+    left: 370px;
+    width: 120px;
+    height: auto;
+}
+
+#signature2 {
+    position: absolute;
+    top: 210px;
+    left: 80px;
+    width: 120px;
+    height: auto;
+}
+
+button {
+    margin: 10px;
+    padding: 8px 14px;
+    border-radius: 5px;
+    border: none;
+    background-color: #444444;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #336fd1;
+}
+
+.zoom {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
