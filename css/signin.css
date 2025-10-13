@@ -3,7 +3,7 @@
     padding: 40px 20px;
 }
 
-.page-container{
+.page-container {
     background: linear-gradient(180deg, rgba(100, 100, 100, 0.8) 0%, rgba(80, 80, 80, 0.9) 100%),
     url("../storage/Sign-in.jpg") center / cover;
 }
@@ -145,7 +145,6 @@
     border-color: #7d2131;
 }
 
-/* Added styles for custom tour toggle button container */
 .custom-tour-toggle {
     max-width: 600px;
     margin: 2rem auto;
@@ -233,7 +232,6 @@
     color: #6d0c1d;
 }
 
-/* Unified submit button styles */
 .submit-btn {
     width: 100%;
     padding: 1.2rem;

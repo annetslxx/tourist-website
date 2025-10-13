@@ -3,7 +3,7 @@
     padding: 40px 20px;
 }
 
-.page-container{
+.page-container {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../storage/Feedback-back.jpg") center / cover;
 }
 
@@ -84,12 +84,10 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Added offset for first testimonial to shift it left */
 .testimonial-card:first-child {
     margin-left: -3rem;
 }
 
-/* Added offset for last testimonial to shift it right */
 .testimonial-card:last-child {
     margin-right: -3rem;
     align-self: flex-end;

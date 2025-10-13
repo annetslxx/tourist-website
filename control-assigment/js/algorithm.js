@@ -10,6 +10,7 @@ function calc() {
     let z = 1 / (x * y);
     document.getElementById('result').innerText = `Z = ${z.toFixed(4)}`;
 }
+
 function goBack() {
     window.location.href = 'index.html';
 }

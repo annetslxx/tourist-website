@@ -1,6 +1,7 @@
-.page-container{
+.page-container {
     background: linear-gradient(180deg, rgba(170, 127, 127, 0.9) 0%, rgba(22, 22, 22, 0.9) 99.99%);
 }
+
 .about-main {
     min-height: 100vh;
     padding: 40px 20px;

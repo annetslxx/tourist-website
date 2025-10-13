@@ -42,11 +42,30 @@ body {
     color: #222;
 }
 
-#surname { top: 470px; left: 250px; }
-#name { top: 535px; left: 230px; }
-#birth { top: 600px; left: 350px; }
-#gender { top: 600px; left: 230px; }
-#city { top: 633px; left: 255px; }
+#surname {
+    top: 470px;
+    left: 250px;
+}
+
+#name {
+    top: 535px;
+    left: 230px;
+}
+
+#birth {
+    top: 600px;
+    left: 350px;
+}
+
+#gender {
+    top: 600px;
+    left: 230px;
+}
+
+#city {
+    top: 633px;
+    left: 255px;
+}
 
 #photo-sign {
     position: absolute;

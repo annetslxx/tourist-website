@@ -7,7 +7,7 @@
     justify-content: center;
 }
 
-.page-container{
+.page-container {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../storage/Contact.jpg") center / cover;
 }
 
@@ -23,7 +23,6 @@
     padding: 3rem;
 }
 
-/* Changed to grid layout for positioning phone and email in corners */
 .contact-info {
     display: grid;
     grid-template-columns: 1fr 1fr;
