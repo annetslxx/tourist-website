@@ -138,6 +138,11 @@
         max-width: 300px;
     }
 
+    .tour-card a {
+        display: block;
+        text-decoration: none;
+    }
+
     .registration-btn {
         padding: 1.2rem 3rem;
         font-size: 1.2rem;
