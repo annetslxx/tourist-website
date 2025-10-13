@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM_JS. Считываем информацию из DOM</title>
+    <link rel="stylesheet" href="../css/dom_js.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<button class="back-button" onclick="goBack()">← Назад на главную</button>
+
+<h1>DOM_JS. Считываем информацию из DOM</h1>
+
+<div class="passport">
+    <p>Фамилия: <span id="lname">Иванов</span></p>
+    <p>Имя: <span id="fname">Иван</span></p>
+    <p>Год рождения: <span id="year">2002</span></p>
+</div>
+
+<button onclick="readData()">Считать данные из DOM</button>
+<p id="output"></p>
+
+<script src="../js/dom_js.js"></script>
+
+<h2>Скриншоты работы</h2>
+<h3>Считывание данных из DOM через кнопку:</h3>
+<img src="../storage/screenshot_read.png" alt="Скрин считывания из DOM" style="max-width: 70%; height: auto;">
+
+<h3>Получение элемента через getElementById в консоли:</h3>
+<img src="../storage/screenshot_console.png" alt="Скрин консоли getElementById" style="max-width: 70%; height: auto;">
+
+</body>
+</html>
+
