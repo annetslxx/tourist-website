@@ -133,18 +133,18 @@
     margin-bottom: 1rem;
 }
 
-.service-item ul {
+.service-item > ul {
     list-style: none;
     padding: 0;
     padding-left: 1.5rem;
 }
 
-.service-item ul li {
+.service-item > ul > li {
     padding: 0.4rem 0;
     position: relative;
 }
 
-.service-item ul li::before {
+.service-item > ul > li::before {
     content: "-";
     position: absolute;
     left: -1.5rem;
