@@ -1,10 +1,10 @@
 function calc() {
-    const problem = "Определить значение функции Z = 1/(XY) при произвольных X и Y";
+    const problem = "Determine the value of the function Z = 1/(XY) for arbitrary X and Y";
     const x = parseFloat(document.getElementById('x').value);
     const y = parseFloat(document.getElementById('y').value);
 
     if (x === 0 || y === 0 || isNaN(x) || isNaN(y)) {
-        document.getElementById('result').innerText = "Ошибка: X и Y должны быть ненулевыми числами!";
+        document.getElementById('result').innerText = "Error: Invalid value";
         return;
     }
 
