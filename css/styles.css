@@ -19,20 +19,14 @@ body {
     background-repeat: no-repeat;
 }
 
-.hero-container::before {
-    content: "";
-    position: absolute;
+.navbar {
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
-    z-index: 1;
-}
-
-.navbar {
-    position: relative;
-    z-index: 10;
     display: flex;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
     justify-content: space-between;
     align-items: center;
     padding: 2rem 3rem;
@@ -62,7 +56,7 @@ body {
 }
 
 .nav-link:hover {
-    opacity: 0.8;
+    opacity: 0.5;
 }
 
 .nav-link.active {
@@ -75,7 +69,7 @@ body {
     bottom: -4px;
     left: 0;
     right: 0;
-    height: 2px;
+    height: 3px;
     background-color: #000000;
 }
 
@@ -91,13 +85,11 @@ body {
 }
 
 .telegram-logo:hover {
-    transform: scale(1.05);
+    transform: scale(1.2);
 }
 
-/* Hero content (index page specific) */
 .hero-content {
     position: relative;
-    z-index: 2;
     display: flex;
     align-items: center;
     justify-content: center;

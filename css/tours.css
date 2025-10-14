@@ -1,5 +1,6 @@
 .tours-main {
     min-height: 100vh;
+    padding-top: 80px;
 }
 
 .page-container {
@@ -86,12 +87,6 @@ html {
     height: auto;
     border-radius: 15px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-}
-
-.tour-image-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
 }
 
 .grid-image {

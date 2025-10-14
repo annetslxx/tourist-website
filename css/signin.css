@@ -1,6 +1,6 @@
 .signin-main {
     min-height: 100vh;
-    padding: 40px 20px;
+    padding: 150px 20px;
 }
 
 .page-container {
@@ -174,7 +174,6 @@
     color: #fff;
 }
 
-/* Added styles for custom tour fields section */
 .custom-tour-fields {
     margin-top: 2rem;
     padding-top: 2rem;
