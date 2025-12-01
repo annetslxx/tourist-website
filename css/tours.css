@@ -180,3 +180,332 @@ html {
 .nav-link {
     color: #a9c6d8;
 }
+
+
+
+
+
+
+/* Нововведения */
+.shop-section {
+    padding: 4rem 2rem;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.product-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 1.5rem;
+}
+
+.product-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #6d0c1d;
+    margin-bottom: 0.5rem;
+}
+
+.product-price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.product-description {
+    color: #666;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.btn-primary {
+    background: #6d0c1d;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #7d2131;
+}
+
+
+
+
+
+
+/* Стили для секции магазина */
+.shop-section {
+    padding: 5rem 2rem;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+}
+
+.shop-section .section-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    position: relative;
+    padding: 1rem 0;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+    animation: titleGlow 3s ease-in-out infinite alternate;
+}
+
+/* Анимация свечения */
+@keyframes titleGlow {
+    0% {
+        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8),
+        0 0 0 rgba(125, 33, 49, 0);
+    }
+    100% {
+        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8),
+        0 0 20px rgba(125, 33, 49, 0.8),
+        0 0 40px rgba(125, 33, 49, 0.6);
+    }
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+    .shop-section .section-title {
+        font-size: 2.2rem;
+        letter-spacing: 0.1em;
+        margin-bottom: 3rem;
+    }
+
+    .shop-section .section-title::before,
+    .shop-section .section-title::after {
+        display: none;
+    }
+
+    .shop-section .section-title::after {
+        width: 150px;
+    }
+
+    @keyframes linePulse {
+        0%, 100% { width: 150px; }
+        50% { width: 180px; }
+    }
+
+    .shop-section {
+        padding: 3rem 1rem;
+    }
+}
+
+/* Стили для карточек товаров */
+.product-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    /* Увеличенный нижний отступ */
+    margin-bottom: 2.5rem;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    border-color: #7d2131;
+    box-shadow: 0 10px 30px rgba(125, 33, 49, 0.3);
+    /* Этот отступ при наведении сохраняется */
+    margin-bottom: 2.5rem;
+}
+
+.product-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-bottom: 2px solid #7d2131;
+}
+
+.product-info {
+    padding: 1.5rem;
+}
+
+.product-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #6d0c1d;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.product-price {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.product-description {
+    color: #666;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.btn-primary {
+    background: #6d0c1d;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    background: #7d2131;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(109, 12, 29, 0.4);
+}
+
+
+
+
+/* CSS Grid для двух колонок товаров */
+#products-container.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin: 0;
+}
+
+#products-container.grid-layout .product-card {
+    min-height: 450px;
+    margin-bottom: 0;
+}
+
+/* Адаптивность для Grid */
+@media (max-width: 992px) {
+    #products-container.grid-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    #products-container.grid-layout .product-card {
+        min-height: 400px;
+    }
+}
+
+
+
+
+/* Адаптация для разных устройств */
+/* Планшеты */
+@media (max-width: 1024px) {
+    .tour-icons {
+        gap: 2rem;
+    }
+
+    .icon-circle {
+        width: 180px;
+        height: 180px;
+    }
+
+    .tours-title {
+        font-size: 2.5rem;
+    }
+
+    .tour-destination {
+        font-size: 2rem;
+    }
+}
+
+/* Мобильные устройства */
+@media (max-width: 768px) {
+    .tour-icons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .icon-circle {
+        width: 150px;
+        height: 150px;
+    }
+
+    .tour-content,
+    .tour-detail.reverse .tour-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .tours-title {
+        font-size: 2rem;
+    }
+
+    .tour-destination {
+        font-size: 1.8rem;
+    }
+
+    .tour-description {
+        font-size: 0.9rem;
+        text-align: left;
+    }
+
+    /* Адаптация сетки товаров */
+    #products-container.grid-layout {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .shop-section .section-title {
+        font-size: 2rem;
+    }
+}
+
+/* Очень маленькие экраны */
+@media (max-width: 480px) {
+    .icon-circle {
+        width: 120px;
+        height: 120px;
+    }
+
+    .tours-title {
+        font-size: 1.8rem;
+    }
+
+    .tour-destination {
+        font-size: 1.5rem;
+    }
+
+    .shop-section {
+        padding: 2rem 1rem;
+    }
+}

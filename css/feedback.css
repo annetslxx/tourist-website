@@ -119,18 +119,28 @@
     box-shadow: 0 8px 25px rgba(109, 12, 29, 0.6);
 }
 
+.nav-link {
+    color: #a9c6d8;
+}
+
+
+
+
+/* Адаптация для разных устройств */
+/* Мобильные устройства */
 @media (max-width: 768px) {
-    .preview-title {
-        font-size: 2rem;
+    .feedback-main {
+        padding: 100px 15px;
     }
 
-    .testimonials-title {
-        font-size: 1.8rem;
+    .preview-title {
+        font-size: 2rem;
     }
 
     .tour-cards {
         flex-direction: column;
         align-items: center;
+        gap: 1.5rem;
     }
 
     .tour-card {
@@ -138,14 +148,9 @@
         max-width: 300px;
     }
 
-    .tour-card a {
-        display: block;
-        text-decoration: none;
-    }
-
-    .registration-btn {
-        padding: 1.2rem 3rem;
-        font-size: 1.2rem;
+    .testimonials-title {
+        font-size: 1.8rem;
+        text-align: center;
     }
 
     .testimonial-card:first-child {
@@ -156,8 +161,28 @@
         margin-right: 0;
         align-self: stretch;
     }
+
+    .registration-btn {
+        padding: 1.2rem 3rem;
+        font-size: 1.2rem;
+    }
 }
 
-.nav-link {
-    color: #a9c6d8;
+/* Очень маленькие экраны */
+@media (max-width: 480px) {
+    .feedback-main {
+        padding: 80px 10px;
+    }
+
+    .preview-title {
+        font-size: 1.8rem;
+    }
+
+    .testimonials-title {
+        font-size: 1.5rem;
+    }
+
+    .testimonial-card {
+        padding: 1.5rem;
+    }
 }

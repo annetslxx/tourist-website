@@ -242,22 +242,85 @@
     left: 100%;
 }
 
-@media (max-width: 768px) {
-    .content-grid,
-    .content-grid.reverse {
-        flex-direction: column;
+
+
+
+/* Адаптация для разных устройств */
+/* Планшеты */
+@media (max-width: 1024px) {
+    .about-main {
+        padding: 100px 20px;
     }
 
-    .discover-grid {
-        flex-direction: column;
-        align-items: center;
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .discover-card {
+        width: 220px;
+        height: 250px;
+    }
+}
+
+/* Мобильные устройства */
+@media (max-width: 768px) {
+    .about-main {
+        padding: 80px 15px;
     }
 
     .section-title {
         font-size: 2rem;
     }
 
-    .image-large {
-        max-width: 100%;
+    .content-grid,
+    .content-grid.reverse {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .discover-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .discover-card {
+        width: 100%;
+        max-width: 300px;
+        height: 200px;
+    }
+
+    .strong-sides,
+    .services {
+        padding: 1.5rem;
+    }
+
+    .subsection-title {
+        font-size: 1.5rem;
+    }
+
+    .steps-list {
+        gap: 1rem;
+    }
+
+    .step {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+/* Очень маленькие экраны */
+@media (max-width: 480px) {
+    .about-main {
+        padding: 60px 10px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .strong-sides,
+    .services {
+        padding: 1rem;
     }
 }

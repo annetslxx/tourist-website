@@ -10,6 +10,7 @@
           rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/tours.css">
+    <link rel="stylesheet" href="../css/cart.css">
 </head>
 <body>
 <div class="page-container">
@@ -27,6 +28,10 @@
             <a href="https://t.me/annetslx" target="_blank">
                 <img src="../storage/telegram.png" alt="telegram-logo" class="telegram-logo">
             </a>
+            <button id="cart-icon" class="cart-icon-btn" onclick="cart.showCart()"
+                    aria-label="Открыть корзину">
+                🛒
+            </button>
         </div>
     </nav>
 
@@ -162,5 +167,28 @@
         </section>
     </main>
 </div>
+
+<!-- Новый раздел с повторяющимися карточками -->
+<section class="shop-section">
+    <div class="container">
+        <h2 class="section-title minimal"><span>Japan Travel Merchandise</span></h2>
+        <div class="row" id="products-container">
+            <!-- Карточки будут генерироваться через JavaScript -->
+        </div>
+    </div>
+    <script src="../js/products.js"></script>
+</section>
+
+<script src="../js/products.js"></script>
+<script src="../js/cart.js"></script>
+
+<script>
+    // Инициализация при загрузке страницы
+    document.addEventListener('DOMContentLoaded', function() {
+        renderProducts();
+        // Обновляем иконку корзины
+        cart.updateCartIcon();
+    });
+</script>
 </body>
 </html>
