@@ -97,8 +97,6 @@
 
 
 
-/* Адаптация для разных устройств */
-/* Мобильные устройства */
 @media (max-width: 768px) {
     .contact-main {
         padding: 20px 15px;
@@ -110,6 +108,7 @@
 
     .info-title {
         font-size: 2rem;
+        margin-bottom: 0.5rem;
     }
 
     .info-detail {
@@ -117,32 +116,50 @@
     }
 
     .contact-info {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
     }
 
+    .info-block,
     .info-block:nth-child(1),
-    .info-block:nth-child(2) {
-        grid-column: 1;
-        justify-self: stretch;
-        text-align: left;
+    .info-block:nth-child(2),
+    .telegram-block {
+        grid-column: auto;
+        grid-row: auto;
+        text-align: center;
+        justify-self: center;
+        align-self: center;
+        padding: 0;
+        width: 100%;
     }
+
 
     .telegram-block {
         flex-direction: column;
-        align-items: flex-start;
+        justify-content: center;
         gap: 1rem;
     }
 }
 
-/* Очень маленькие экраны */
+
 @media (max-width: 480px) {
     .contact-section {
-        padding: 1.5rem;
+        padding: 1.5rem 1rem;
+    }
+
+
+    .info-block {
+
+        padding: 0;
     }
 
     .info-title {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
+    }
+
+    .info-detail {
+        font-size: 0.95rem;
     }
 
     .telegram-icon {
