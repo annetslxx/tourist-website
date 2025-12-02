@@ -4,195 +4,215 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In - Japan Travel Agency</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap"
-          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/signin.css">
 </head>
 <body>
 <div class="page-container">
-    <nav class="navbar">
-        <div class="nav-left">
-            <a href="index.html" class="logo-circle"></a>
-            <a href="index.html" class="nav-link">Home</a>
-            <a href="about.html" class="nav-link">About us</a>
-            <a href="tours.html" class="nav-link">Tours</a>
-            <a href="signin.html" class="nav-link active">Sign in</a>
-            <a href="contact.html" class="nav-link">Contact</a>
-            <a href="feedback.html" class="nav-link">Feedback</a>
-        </div>
-        <div class="nav-right">
-            <a href="https://t.me/annetslx" target="_blank">
-                <img src="../storage/telegram.png" alt="telegram-logo" class="telegram-logo">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a href="index.html" class="navbar-brand">
+                <div class="logo-circle"></div>
             </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav ms-auto">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About us</a>
+                    <a href="tours.html" class="nav-link">Tours</a>
+                    <a href="signin.html" class="nav-link active">Sign in</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                    <a href="feedback.html" class="nav-link">Feedback</a>
+                    <a href="https://t.me/annetslx" target="_blank" class="nav-link">
+                        <img src="../storage/telegram.png" alt="telegram-logo" class="telegram-logo">
+                    </a>
+                    <button id="cart-icon" class="cart-icon-btn" onclick="cart.showCart()" aria-label="Open cart">🛒</button>
+                </div>
+            </div>
         </div>
     </nav>
 
     <main class="signin-main">
-        <section class="registration-section">
-            <h1 class="page-title">Start Your Japanese Journey</h1>
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 col-lg-6">
+                    <section class="registration-section">
+                        <h1 class="page-title">Start Your Japanese Journey</h1>
 
-            <form class="registration-form" method="POST" action="https://httpbin.org/post">
-                <div class="form-group">
-                    <label>First name:</label>
-                    <input type="text" name="firstName" required>
-                </div>
+                        <form class="registration-form" method="POST" action="https://httpbin.org/post">
+                            <div class="form-group">
+                                <label>First name:</label>
+                                <input type="text" name="firstName" required>
+                            </div>
 
+                            <div class="form-group" hidden>
+                                <label>Role:</label>
+                                <input type="hidden" name="role" value="user">
+                            </div>
 
-                <div class="form-group" hidden>
-                    <label>Role:</label>
-                    <input type="hidden" name="role" value="user">
-                </div>
+                            <div class="form-group">
+                                <label>Last Name:</label>
+                                <input type="text" name="lastName" required>
+                            </div>
 
-                <div class="form-group">
-                    <label>Last Name:</label>
-                    <input type="text" name="lastName" required>
-                </div>
+                            <div class="form-group">
+                                <label>Email address:</label>
+                                <input type="email" name="email" required>
+                            </div>
 
-                <div class="form-group">
-                    <label>Email address:</label>
-                    <input type="email" name="email" required>
-                </div>
+                            <div class="form-group">
+                                <label>Phone Number:</label>
+                                <input type="tel" name="phone" required>
+                            </div>
 
-                <div class="form-group">
-                    <label>Phone Number:</label>
-                    <input type="tel" name="phone" required>
-                </div>
+                            <div class="form-group">
+                                <label>Create Password:</label>
+                                <input type="password" name="password" required>
+                            </div>
 
-                <div class="form-group">
-                    <label>Create Password:</label>
-                    <input type="password" name="password" required>
-                </div>
+                            <div class="form-group">
+                                <label>Tour Preference:</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="tourPref" value="cultural">
+                                        Cultural Tours
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="tourPref" value="city">
+                                        City Adventures
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="tourPref" value="nature">
+                                        Nature Exploration
+                                    </label>
+                                </div>
+                            </div>
 
-                <div class="form-group">
-                    <label>Tour Preference:</label>
-                    <div class="checkbox-group">
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="tourPref" value="cultural">
-                            Cultural Tours
-                        </label>
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="tourPref" value="city">
-                            City Adventures
-                        </label>
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="tourPref" value="nature">
-                            Nature Exploration
-                        </label>
+                            <div class="form-group">
+                                <label>Preferred Travel Date:</label>
+                                <input type="date" name="travelDate">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Subscribe to newsletter</label>
+                                <div class="radio-group">
+                                    <label class="radio-label">
+                                        <input type="radio" name="newsletter" value="yes">
+                                        Yes
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="newsletter" value="no" checked>
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Additional info:</label>
+                                <textarea name="additionalInfo" rows="4"></textarea>
+                            </div>
+
+                            <button type="submit" class="submit-btn">Create Account & Explore Japan</button>
+                        </form>
+                    </section>
+
+                    <div class="custom-tour-toggle">
+                        <button type="button" class="toggle-btn" id="toggleCustomTour">
+                            Custom Tour Request
+                        </button>
                     </div>
+
+                    <section class="custom-tour-section" id="customTourSection" style="display: none;">
+                        <h2 class="section-title">Custom Tour Request</h2>
+                        <form class="custom-tour-form" method="POST" action="https://httpbin.org/post">
+                            <div class="form-group">
+                                <label>First name:</label>
+                                <input type="text" name="firstName" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Last Name:</label>
+                                <input type="text" name="lastName" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Email address:</label>
+                                <input type="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Phone Number:</label>
+                                <input type="tel" name="phone" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Number of Travelers:</label>
+                                <input type="number" name="travelers" min="1" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Budget Range: <span id="budgetValue">$2,000</span></label>
+                                <input type="range" name="budget" id="budgetSlider" min="2000" max="100000" step="1000" value="2000" class="budget-slider">
+                                <div class="budget-labels">
+                                    <span>$2,000</span>
+                                    <span>$100,000</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Activities:</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="activities" value="shopping">
+                                        Shopping
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="activities" value="temples">
+                                        Temple visits
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="activities" value="food">
+                                        Food tours
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="activities" value="workshops">
+                                        Cultural workshops
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Preferred Travel Date:</label>
+                                <input type="date" name="travelDate" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Additional info:</label>
+                                <textarea name="additionalInfo" rows="4"></textarea>
+                            </div>
+
+                            <button type="submit" class="submit-btn">Submit Custom Tour Request</button>
+                        </form>
+                    </section>
                 </div>
-
-                <div class="form-group">
-                    <label>Preferred Travel Date:</label>
-                    <input type="date" name="travelDate">
-                </div>
-
-                <div class="form-group">
-                    <label>Subscribe to newsletter</label>
-                    <div class="radio-group">
-                        <label class="radio-label">
-                            <input type="radio" name="newsletter" value="yes">
-                            Yes
-                        </label>
-                        <label class="radio-label">
-                            <input type="radio" name="newsletter" value="no" checked>
-                            No
-                        </label>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label>Additional info:</label>
-                    <textarea name="additionalInfo" rows="4"></textarea>
-                </div>
-
-                <button type="submit" class="submit-btn">Create Account & Explore Japan</button>
-            </form>
-        </section>
-
-        <div class="custom-tour-toggle">
-            <button type="button" class="toggle-btn" id="toggleCustomTour">
-                Custom Tour Request
-            </button>
+            </div>
         </div>
-
-        <section class="custom-tour-section" id="customTourSection" style="display: none;">
-            <h2 class="section-title">Custom Tour Request</h2>
-            <form class="custom-tour-form" method="POST" action="https://httpbin.org/post">
-                <div class="form-group">
-                    <label>First name:</label>
-                    <input type="text" name="firstName" required>
-                </div>
-
-                <div class="form-group">
-                    <label>Last Name:</label>
-                    <input type="text" name="lastName" required>
-                </div>
-
-                <div class="form-group">
-                    <label>Email address:</label>
-                    <input type="email" name="email" required>
-                </div>
-
-                <div class="form-group">
-                    <label>Phone Number:</label>
-                    <input type="tel" name="phone" required>
-                </div>
-
-                <div class="form-group">
-                    <label>Number of Travelers:</label>
-                    <input type="number" name="travelers" min="1" required>
-                </div>
-
-                <div class="form-group">
-                    <label>Budget Range: <span id="budgetValue">$2,000</span></label>
-                    <input type="range" name="budget" id="budgetSlider" min="2000" max="100000" step="1000" value="2000"
-                           class="budget-slider">
-                    <div class="budget-labels">
-                        <span>$2,000</span>
-                        <span>$100,000</span>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label>Activities:</label>
-                    <div class="checkbox-group">
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="activities" value="shopping">
-                            Shopping
-                        </label>
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="activities" value="temples">
-                            Temple visits
-                        </label>
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="activities" value="food">
-                            Food tours
-                        </label>
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="activities" value="workshops">
-                            Cultural workshops
-                        </label>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label>Preferred Travel Date:</label>
-                    <input type="date" name="travelDate" required>
-                </div>
-
-                <div class="form-group">
-                    <label>Additional info:</label>
-                    <textarea name="additionalInfo" rows="4"></textarea>
-                </div>
-
-                <button type="submit" class="submit-btn">Submit Custom Tour Request</button>
-            </form>
-        </section>
     </main>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../js/cart.js"></script>
 <script src="../js/signin.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        cart.updateCartIcon();
+    });
+</script>
 </body>
 </html>
