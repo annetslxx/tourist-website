@@ -1,12 +1,16 @@
 class ShoppingCart {
     constructor() {
+
+        // получаем из локального хранилища браузера переменную japanCart
+        // items - добавленные в корзину товары
         this.items = JSON.parse(localStorage.getItem("japanCart")) || []
         this.init()
     }
 
+    //
     init() {
-        this.updateCartIcon()
-        this.setupCartModal()
+        this.updateCartIcon() // обновляем иконку корзины
+        this.setupCartModal() // создает окно корзины (по умолчанию скрыто)
     }
 
     addToCart(product) {
@@ -16,21 +20,21 @@ class ShoppingCart {
             existingItem.quantity += 1
         } else {
             this.items.push({
-                ...product,
+                ...product, // ... - операция разыменования
                 quantity: 1,
             })
         }
 
         this.saveCart()
-        this.updateCartIcon()
-        this.showNotification(`${product.name} added to cart!`)
+        this.updateCartIcon() // обновляем иконку
+        this.showNotification(`${product.name} added to cart!`) // уведомление
     }
 
     removeFromCart(productId) {
         this.items = this.items.filter((item) => item.id !== productId)
         this.saveCart()
         this.updateCartIcon()
-        this.updateCartModal()
+        this.updateCartModal() // обновляем окно корзины
     }
 
     updateQuantity(productId, newQuantity) {
@@ -48,6 +52,7 @@ class ShoppingCart {
     }
 
     saveCart() {
+        //localStorage - память браузера, которая помнит данные даже после закрытия сайта
         localStorage.setItem("japanCart", JSON.stringify(this.items))
     }
 
@@ -65,6 +70,7 @@ class ShoppingCart {
     }
 
     setupCartModal() {
+        // сравниваем страницу, на которой находимся со страницей туров
         const currentPage = window.location.pathname
         const isToursPage = currentPage.includes("tours.html") || currentPage.endsWith("tours")
 
@@ -72,8 +78,11 @@ class ShoppingCart {
             return
         }
 
+        // если есть окно корзины, новое не создаем
         if (!document.getElementById("cart-modal")) {
-            const modalHTML = `
+            const modalHTML =
+                // шаблон окна корзины
+                `
             <div id="cart-modal" class="cart-modal">
                 <div class="cart-modal-content">
                     <div class="cart-modal-header">
@@ -92,7 +101,7 @@ class ShoppingCart {
                 </div>
             </div>
         `
-
+            // вставляем html код в конец страницы
             document.body.insertAdjacentHTML("beforeend", modalHTML)
         }
     }

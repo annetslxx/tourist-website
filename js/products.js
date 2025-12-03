@@ -93,7 +93,9 @@ function renderProducts() {
     container.innerHTML = ""
 
     products.forEach((product) => {
-        const productHTML = `
+        const productHTML =
+            // изменяемая строка
+            `
             <div class="product-card">
                 <img src="${product.image}" alt="${product.name}" class="product-image">
                 <div class="product-info">
